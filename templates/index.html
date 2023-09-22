@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Suicide Related
+Activity on Twitter</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+	<style>
+	body  {
+background-image: url("../static/img/sad3.jpg");
+background-color: #cccccc;
+}
+</style>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Suicide Related
+Activity on Twitter</h1>
+	 <h1 class="cover-heading" ></h1>
+	         
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('chart')}}"method=['POST']>
+    	<textarea type="text" class="form-control  text-white" name="news" id="news" placeholder="Paste the twitter text here!" rows="8" cols="54"></textarea><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button></a>
+		 
+    </form>
+
+   
+  <h1> CLASS:{{prediction_text}}</h1>
+<a href="{{ url_for('user')}}" button type="submit" class="btn btn-primary btn-block btn-large">ANALYSIS</button></a>
+ </div>
+
+ 
+</body>
+
+ 
+</html>
+ 
